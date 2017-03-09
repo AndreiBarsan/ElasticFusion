@@ -65,6 +65,8 @@ static inline void cudaSafeCall(cudaError_t err)
 {
     if(cudaSuccess != err)
     {
+        // TODO(andrei): Turn this back into a macro so that __FILE__ and __LINE__ are useful again, or
+        // find some other way of keeping track of the source of the CUDA error.
         std::cout << "Error: " << cudaGetErrorString(err) << ": " << __FILE__ << ":" << __LINE__ << std::endl;
         exit(0);
     }

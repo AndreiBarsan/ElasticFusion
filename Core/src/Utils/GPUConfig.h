@@ -65,6 +65,25 @@ class GPUConfig
 
             std::string dev(prop.name);
 
+            // Added by Andrei Barsan, 2017-03-09, in the hopes that his little old GPU can handle EF.
+            // GPUTest run #1
+//            icpStepMap["GeForce GTX 580"] = std::pair<int, int>(256, 32);
+//            rgbStepMap["GeForce GTX 580"] = std::pair<int, int>(96, 96);
+//            rgbResMap["GeForce GTX 580"] = std::pair<int, int>(256, 80);
+//            so3StepMap["GeForce GTX 580"] = std::pair<int, int>(64, 128);
+            // GPUTest run #2
+//            icpStepMap["GeForce GTX 580"] = std::pair<int, int>(512, 16);
+//            rgbStepMap["GeForce GTX 580"] = std::pair<int, int>(96, 80);
+//            rgbResMap["GeForce GTX 580"] = std::pair<int, int>(352, 64);
+//            so3StepMap["GeForce GTX 580"] = std::pair<int, int>(16, 96);
+            // GPUTest run #3
+            icpStepMap["GeForce GTX 580"] = std::pair<int, int>(256, 32);
+            rgbStepMap["GeForce GTX 580"] = std::pair<int, int>(96, 80);
+            rgbResMap["GeForce GTX 580"] = std::pair<int, int>(256, 64);
+            so3StepMap["GeForce GTX 580"] = std::pair<int, int>(64, 96);
+
+
+
             icpStepMap["GeForce GTX 780 Ti"] = std::pair<int, int>(128, 112);
             rgbStepMap["GeForce GTX 780 Ti"] = std::pair<int, int>(128, 112);
             rgbResMap["GeForce GTX 780 Ti"] = std::pair<int, int>(256, 336);
