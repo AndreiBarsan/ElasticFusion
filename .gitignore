@@ -3,3 +3,7 @@ deps/
 .project
 .cproject
 *.user
+.idea/
+data/
+cmake-build-debug/
+CMakeLists.txt
